@@ -1,3 +1,3 @@
 @Library('chef_automation') _
 
-promoteCookbook 'cookbook_name'
+promoteCookbook 'all_systems'
