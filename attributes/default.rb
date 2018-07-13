@@ -8,10 +8,10 @@ default['audit']['fetcher'] = 'chef-server-automate'
 default['audit']['profiles'] = [
   {
     name: 'DevSec Linux Patch Benchmark',
-    compliance: 'lab_admin/linux-patch-baseline',
+    compliance: 'admin/linux-patch-baseline',
   },
   {
     name: 'DevSec Linux Security Baseline',
-    compliance: 'lab_admin/linux-baseline',
+    compliance: 'admin/linux-baseline',
   },
 ]
