@@ -14,8 +14,4 @@ default['audit']['profiles'] = [
     name: 'DevSec Linux Security Baseline',
     compliance: 'admin/linux-baseline',
   },
-  {
-    name: 'HOSTS file verification',
-    compliance: 'admin/test_hosts_file',
-  },
 ]
