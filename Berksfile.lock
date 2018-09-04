@@ -9,7 +9,7 @@ DEPENDENCIES
     revision: 76342ab3a1cf2f935c2a16eed7ed8d33caad1f58
 
 GRAPH
-  all_systems (0.1.5)
+  all_systems (0.1.9)
     audit (>= 0.0.0)
     chef-client (>= 0.0.0)
     cis_baseline (>= 0.0.0)
