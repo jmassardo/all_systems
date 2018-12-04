@@ -6,4 +6,4 @@
 
 include_recipe 'chef-client::default'
 include_recipe 'audit::default'
-#include_recipe 'cis_baseline::default'
+# include_recipe 'cis_baseline::default'
