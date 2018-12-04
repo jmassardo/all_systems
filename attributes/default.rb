@@ -6,27 +6,12 @@ node.default['chef_client']['splay'] = 60
 default['audit']['reporter'] = 'chef-server-automate'
 default['audit']['fetcher'] = 'chef-server-automate'
 
-default['audit']['profiles'] = case node['platform_family']
-                               when 'windows'
-                                 [
-                                   {
-                                     name: 'DevSec Windows Patch Baseline',
-                                     compliance: 'admin/windows-patch-baseline',
-                                   },
-                                   {
-                                     name: 'DevSec Windows Security Baseline',
-                                     compliance: 'admin/windows-baseline',
-                                   },
-                                 ]
-                               else
-                                 [
-                                   {
-                                     name: 'DevSec Linux Patch Benchmark',
-                                     compliance: 'admin/linux-patch-baseline',
-                                   },
-                                   {
-                                     name: 'DevSec Linux Security Baseline',
-                                     compliance: 'admin/linux-baseline',
-                                   },
-                                 ]
-                               end
+case node['platform_family']
+when 'windows'
+  default['audit']['profiles']['DevSec Windows Patch Baseline'] = { 'compliance': 'admin/windows-patch-baseline' }
+  default['audit']['profiles']['DevSec Windows Security Baseline'] = { 'compliance': 'admin/windows-baseline' }
+
+else
+  default['audit']['profiles']['DevSec Linux Patch Benchmark'] = { 'compliance': 'admin/linux-patch-baseline' }
+  default['audit']['profiles']['DevSec Linux Security Baseline'] = { 'compliance': 'admin/linux-baseline' }
+end
