@@ -9,7 +9,7 @@ chef_version '>= 12.14' if respond_to?(:chef_version)
 supports 'ubuntu'
 depends 'chef-client'
 depends 'audit'
-depends 'cis_baseline'
+# depends 'cis_baseline'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
