@@ -17,6 +17,10 @@ default['audit']['profiles'] = case node['platform_family']
                                      name: 'DevSec Windows Security Baseline',
                                      compliance: 'admin/windows-baseline',
                                    },
+                                   {
+                                     name: 'Attribute Test',
+                                     compliance: 'admin/attributes_test',
+                                   },
                                  ]
                                else
                                  [
@@ -27,6 +31,10 @@ default['audit']['profiles'] = case node['platform_family']
                                    {
                                      name: 'DevSec Linux Security Baseline',
                                      compliance: 'admin/linux-baseline',
+                                   },
+                                   {
+                                     name: 'Attribute Test',
+                                     compliance: 'admin/attributes_test',
                                    },
                                  ]
                                end
