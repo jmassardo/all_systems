@@ -5,7 +5,7 @@ node.default['chef_client']['splay'] = 60
 # Audit attributes
 node.default['audit']['reporter'] = 'chef-server-automate'
 node.default['audit']['fetcher'] = 'chef-server-automate'
-node.default['audit']['attributes']['environment'] = node.chef_environment
+#node.default['audit']['attributes']['environment'] = node.chef_environment
 node.default['audit']['profiles'] = case node['platform_family']
                                     when 'windows'
                                       [
