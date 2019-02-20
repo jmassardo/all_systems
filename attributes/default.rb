@@ -7,7 +7,10 @@ default['audit']['reporter'] = 'chef-server-automate'
 default['audit']['fetcher'] = 'chef-server-automate'
 
 # push chef env over to inspec
-default['audit']['attributes']['environment'] = node.chef_environment
+node.normal['audit']['attributes']['environment'] = node.chef_environment
+# default['audit']['attributes'] = {
+#   environment: node.chef_environment,
+# }
 default['audit']['profiles'] =  case node['platform_family']
                                 when 'windows'
                                   [
