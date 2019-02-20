@@ -32,7 +32,7 @@ default['audit']['profiles'] =  case node['platform_family']
                                     },
                                     {
                                       name: 'Attribute Test',
-                                      compliance: 'admin/admin/attributes_test',
+                                      compliance: 'admin/attributes_test',
                                     },
                                   ]
                                 end
