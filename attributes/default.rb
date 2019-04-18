@@ -33,9 +33,5 @@ default['audit']['profiles'] = case node['platform_family']
                                      name: 'DevSec Linux Security Baseline',
                                      compliance: 'admin/linux-baseline',
                                    },
-                                   {
-                                     name: 'Attribute Test',
-                                     compliance: 'admin/attributes_test',
-                                   },
                                  ]
                                end
