@@ -1,6 +1,6 @@
 # Chef Client attributes
 default['chef_client']['interval'] = 300
-default['chef_client']['splay'] = 120
+default['chef_client']['splay'] = 30
 
 # Audit attributes
 default['audit']['reporter'] = 'chef-server-automate'
